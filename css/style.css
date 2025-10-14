@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono:wght@300&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex-grow: 1;
+}
+
+*{
+    font-family: 'Roboto Mono', monospace;
+    }
+    
+body{
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}
+
+li{
+    color: white;
+    font-size: 25px;
+    margin-top: 10px;
+}
