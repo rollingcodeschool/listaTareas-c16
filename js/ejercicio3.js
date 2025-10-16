@@ -19,7 +19,21 @@ function agregarTarea(e) {
     tarea.innerHTML = `${dato} <button type="button" class="btn btn-danger borrar">Eliminar Tarea</button>`;
     listadoTareas.appendChild(tarea);
     input.value = "";
+    guardarTareas()
   } else {
     alert("Usted no ingreso una tarea");
   }
+}
+
+function guardarTareas(){
+  const elementos = listadoTareas.querySelectorAll('li')
+  const arrayTareas = []
+  console.log(elementos)
+  elementos.forEach((li)=>{
+    const textoTarea = li.firstChild.textContent.trim()
+    arrayTareas.push(textoTarea)
+  })
+//guardar el arrayTareas en localstorage
+localStorage.setItem('tareasKey', JSON.stringify(arrayTareas))
+
 }
